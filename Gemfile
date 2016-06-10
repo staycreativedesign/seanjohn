@@ -23,7 +23,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem "ckeditor"
+# gem "ckeditor"
 gem "carrierwave"
 gem "mini_magick"
 
