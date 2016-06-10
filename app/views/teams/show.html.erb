@@ -1,0 +1,5 @@
+<div class="desktop">
+<%= render partial: "layouts/linkname", locals: { link_object: @team } %>
+</div>
+
+<%= render partial: @team.partial_name, locals: { link_object: @team } %>

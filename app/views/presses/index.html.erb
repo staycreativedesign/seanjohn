@@ -1,0 +1,11 @@
+<div>
+  <ul>
+    <% @presses.each do |press| %>
+      <li class="press">
+        <figure>
+          <%= press.image.html_safe %>
+        </figure>
+      </li>
+    <% end %>
+  </ul>
+</div>

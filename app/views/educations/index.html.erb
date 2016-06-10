@@ -1,0 +1,18 @@
+<% @educations.each do |education| %>
+
+<table>
+  <tr>
+    <td>
+      <%= education.name %>
+    </td>
+  </tr>
+  <tr>
+    <td> 
+      <%= education.image.html_safe %>
+    </td>
+    <td>
+      <%= education.desc.html_safe %>
+    </td>
+  </tr>
+</table>  
+<% end %>

@@ -1,0 +1,6 @@
+<%= render partial: "layouts/linkname", locals: { link_object: @service } %>
+<% if @service.template_normal? %>
+  <%= render partial: 'service-normal', object: @service %>
+  <% else %>
+    <%= render partial: 'service-special', object: @service  %>
+<% end %>

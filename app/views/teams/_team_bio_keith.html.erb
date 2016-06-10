@@ -1,0 +1,37 @@
+<h1 class="mobile-h1 mobile">
+  <p>
+    <%= @team.name.downcase %>
+  </p>
+</h1>
+<div class="left bio-image">
+  <%= image_tag @team.image %>
+</div>
+
+<div class="right bio-text">
+  <h1 class="desktop">
+    <%= @team.name.downcase %>
+  </h1>
+  <h2>
+    i'm from
+  </h2>
+  <p>
+    <%= @team.from.html_safe %>
+  </p>
+  <h2>
+    highlights of my career
+  </h2>  
+  <%= @team.apprenticed.html_safe %>
+  <h2>
+    fashion shows &amp; designers
+  </h2>
+  <%= @team.workedat.html_safe %>
+  <h2>
+    magazine &amp; articles
+
+  </h2>
+  <%= @team.workedwith.html_safe  %>
+  <h2>
+    i specialize in
+  </h2>
+  <%= @team.specialize.html_safe %>
+</div>

@@ -1,0 +1,87 @@
+<%= form_for @team do |form| -%>
+  <div class="form-block left">
+    <div class="form-block">
+      <%= form.label :name  %>
+      <%= form.text_field :name %>
+    </div>
+    <div class="form-block">
+      <%= form.label "Select Template" %>
+      <%= form.text_field :template %>
+  </div>
+  <div class="form-block">
+    <p>
+    <%= form.label "Inner Link Name"  %>
+    <%= form.cktext_area :linkname, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '100',
+      :width => '387',
+      :toolbar => "mini"
+    } 
+     %>
+    </p>
+  </div>
+    <%= form.label :image %>
+    <%= form.file_field :image, :class => '"dropzone"' %>   
+  </div>
+  <div class="form-block right">
+    <p>
+      <%= form.label "I'm from:" %>
+      <%= form.cktext_area :from, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '200',
+      :width => '387', 
+      :toolbar => "team"
+    } 
+    %>     
+    </p>
+    <p>
+      <%= form.label "I apprenticed at:" %>
+      <%= form.cktext_area :apprenticed, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '200',
+      :width => '387', 
+      :toolbar => "team"
+    } 
+    %>  
+    </p>
+    <p>
+      <%= form.label "Then worked at:" %>
+      <%= form.cktext_area :workedat, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '200',
+      :width => '387', 
+      :toolbar => "team"
+    } 
+    %>  
+    </p>
+    <p>
+      <%= form.label "I have worked with:" %>
+      <%= form.cktext_area :workedwith, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '200',
+      :width => '387', 
+      :toolbar => "team"
+    } 
+    %>  
+    </p>
+    <p>
+      <%= form.label "I specialize in:" %>
+      <%= form.cktext_area :specialize, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '200',
+      :width => '387', 
+      :toolbar => "team"
+    } 
+    %>  
+    </p>
+  </div>
+  <p class="clear">
+    <%= form.submit "Save" %>
+  </p>
+<% end %>

@@ -1,0 +1,17 @@
+<p class="center">
+    Because of this we are gifting you.
+  </p>
+  <br>
+  <h1 class="center">25% OFF FIRST TIME VISIT</h1>
+  <br>
+  <p class="center">
+    All we ask is you to enter your full name. 
+  </p>
+  <div class="half_size center">
+  <%= form_for @new_client, :url => welcome_path do |form| %>
+    <div class="field">
+      <%= form.text_field :name, placeholder: "Enter Full Name Here" %>
+    </div>
+
+    <%= form.submit "Send" %>
+  <% end %>

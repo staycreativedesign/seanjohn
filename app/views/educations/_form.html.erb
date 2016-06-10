@@ -1,0 +1,48 @@
+<%= form_for @education do |form| -%>
+  <div class="form-block left">
+    <div class="form-block">
+      <%= form.label :name  %>
+      <%= form.text_field :name %>
+    </div>
+    <div class="form-block">
+      <%= form.label "Select Template"  %>
+      <%= form.text_field :template %>
+    </div>
+    <div class="form-block">
+      <p>
+      <%= form.label "Inner Link Name"  %>
+      <%= form.cktext_area :linkname, :ckeditor => {
+        filebrowserImageBrowseUrl: '/ckeditor/pictures',
+        filebrowserImageUploadUrl: '/ckeditor/pictures',
+        :height => '100',
+        :width => '461',
+        :toolbar => "mini"
+      } 
+       %>
+      </p>
+    </div>
+    <%= form.label :image %>
+    <%= form.cktext_area :image, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '400',
+      :width => '461',
+      :toolbar => "img" 
+    } 
+    %>    
+  </div>
+  <div class="form-block right">
+    <%= form.label "Description" %>
+    <%= form.cktext_area :desc, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '400',
+      :width => '461',
+      :toolbar => "mini"
+    } 
+     %>    
+  </div>
+  <p>
+    <%= form.submit "Save" %>
+  </p>
+<% end %>

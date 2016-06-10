@@ -1,0 +1,31 @@
+<h1 class="mobile-h1">
+  <p>our<span class="hair">team</span></p>
+
+</h1>
+<div class="left team-photos">
+    <ul>
+  <% @teams.each do |team| %>
+    <li>
+      <div class="photo-container">        
+        <div class="box">        
+          <%= team.has_no_description ? image_tag(team.image) : link_to(image_tag(team.image), team_path(team)) %>
+          <span class="caption simple-caption desktop">  
+            <h1>
+              <%= team.name.downcase %>
+           </h1>
+          </span>  
+        </div> 
+      </div>
+    </li>
+  <% end %>
+    </ul>
+</div>
+
+<div class="right team-desc">
+  <p>
+    Each member of our team goes through adept training before they reach the salon floor and additionally attend bi-weekly, in-house training events where they practice and perfect new techniques in cutting, styling and coloring that are todays trends.
+  </p>
+  <p>
+    This investment into training ensures our clients receive the very latest in hair design with highest regard paid to quality. All services start with an in-depth consultation that takes face shape, body structure, hair texture, and lifestyle into consideration.
+  </p>
+</div>

@@ -1,0 +1,55 @@
+<%= form_for @service do |form| -%>
+  <div class="form-block left">
+    <div class="form-block">
+      <p>
+        <%= form.label :name  %>
+        <%= form.text_field :name %>
+      </p>
+    </div>
+    <div class="form-block">
+      <p>
+        <%= form.label "Select Template"  %>
+        <%= form.text_field :template %>
+      </p>
+    </div>
+    <div class="form-block">
+      <p>
+      <%= form.label "Inner Link Name"  %>
+      <%= form.cktext_area :linkname, :ckeditor => {
+        filebrowserImageBrowseUrl: '/ckeditor/pictures',
+        filebrowserImageUploadUrl: '/ckeditor/pictures',
+        :height => '100',
+        :width => '387',
+        :toolbar => "mini"
+      } 
+       %>
+      </p>
+    </div>
+    <%= form.label :image %>
+    <%= form.cktext_area :image, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '400',
+      :width => '387', 
+      :toolbar => "img"
+    } 
+    %>    
+  </div>
+  <div class="form-block right">
+    <p>
+    <%= form.label "Description" %>
+    <%= form.cktext_area :desc, :ckeditor => {
+      filebrowserImageBrowseUrl: '/ckeditor/pictures',
+      filebrowserImageUploadUrl: '/ckeditor/pictures',
+      :height => '400',
+      :width => '547',
+      :toolbar => "mini"
+    } 
+     %>
+    </p>    
+  </div>
+  <%= render 'layouts/seo' %>
+  <p>
+    <%= form.submit "Save" %>
+  </p>
+<% end %>

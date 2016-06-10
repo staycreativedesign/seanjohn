@@ -1,0 +1,21 @@
+<% @services.each do |service| %>
+
+<table>
+  <tr>
+    <td>
+      <%= service.name %>
+    </td>
+    <td>
+      <%= service.id %>
+    </td>
+  </tr>
+  <tr>
+    <td> 
+      <%= service.image.html_safe %>
+    </td>
+    <td>
+      <%= service.desc.html_safe %>
+    </td>
+  </tr>
+</table>  
+<% end %>

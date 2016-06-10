@@ -1,0 +1,220 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+.half_size {
+  padding-bottom: 200px;
+}
+
+.half_size input#message_name {
+  border: 0;
+  text-align: center;
+  padding:20px 0;
+  font-size: 2em;
+}
+
+input[type="submit"] {
+  border: 0;
+  text-align: center;
+  padding:20px 0;
+  font-size: 2em;
+  width: 80%;
+  border-radius: 4px
+}
+
+.fb-like {
+  width: 400px;
+  float: left;
+  padding: 15px 0;
+}
+
+.displayNone {
+  display: none;
+}
+
+.HelveticaNeueLT-Light { 
+  font-family: HelveticaNeueLT-Light;
+  font-weight: normal;
+  font-style: normal;
+}
+.HelveticaNeueLT-UltraLight, .hair { 
+  font-family: HelveticaNeueLT-UltraLight;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.userSession {
+  width: 50%;
+  margin:0 auto;
+  padding: 10px;
+}
+
+.signIn {
+  margin-top: 20px;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+
+html {
+}
+
+a {
+  text-decoration: none;
+  color:black;
+  /* First we need to help some browsers along for this to work.
+     Just because a vendor prefix is there, doesn't mean it will
+     work in a browser made by that vendor either, it's just for
+     future-proofing purposes I guess. */
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+a:hover { color:gray; }
+
+body {
+  font-family: HelveticaNeueLT-Light;
+  font-weight: normal;
+  font-style: normal;
+  color:#222;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding:0;
+}
+
+.clear {
+  clear: both;
+}
+
+input {
+  width: 100%;
+}
+.center {
+  text-align: center;
+}
+
+.field {
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 500px) {
+
+  .mobile-h1 {
+    border-bottom: 1px solid #ccc;
+
+  }
+
+  .mobile-h1 p {
+    border-bottom: 0;
+    margin-bottom: 5px;
+  }
+
+
+  .bottomBorder {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  .mobile {
+    display:none;
+  }
+
+  .container {
+    margin:0 auto;
+    max-width: 950px;
+    min-width: 950px;
+    padding:20px;
+  }
+
+  .logo {
+    text-align: right;
+  }
+  
+  .menu-button {
+    display: none;
+  }
+
+  .nav_bottom {
+    margin:0 auto;
+    width:100%;
+    text-align: center;
+    margin-top: 20px;
+    clear: both; 
+  }
+
+  .footer-menu-left {
+    float:right;
+    font-family: arial;
+    margin-left:30px;
+    margin-top:5px;
+    margin-bottom:20px;
+    font-size:0.7em;
+    text-align:right;
+  }
+  .featuredMenu {
+    clear: both;
+    margin-left: 0;
+    margin:0;
+    width: 100%;
+    display: block;
+    border-bottom:1px solid #ccc;
+  }
+  
+}
+
+
+@media screen and (max-width: 490px) {
+  .desktop {
+    display: none;
+
+  }
+
+  html {
+    height: 90%;
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    background-repeat:no-repeat;
+    background-position:center top;
+    min-height: 100%;
+    background-color: black;
+
+  }
+
+  .container {
+    padding:0;
+    margin:0 auto;
+    width:auto;
+
+  }
+
+  .slider-wrapper {
+    display: none;
+  }
+
+  .logo {
+      text-align: center;
+    }
+}

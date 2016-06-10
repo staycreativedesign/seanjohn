@@ -1,0 +1,39 @@
+<h1 class="mobile-h1">
+  <p>modelswanted</p>
+</h1>
+<div class="left-content left image">
+  <p>
+    <img src="/images/content_miami-beach-models-wanted.jpg" alt="">
+  </p>
+</div>
+<div class="right-content right services">
+  <%= form_for @message, :url => contact_path do |form| %>
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+      
+      <div class="field">
+        <%= form.label :email %>
+        <%= form.text_field :email %>
+      </div>
+      <div class="field">
+        <%= form.label :phone %>
+        <%= form.text_field :phone %>
+      </div>
+      <div class="field">
+        <%= form.label :services %>
+        <%= form.text_field :services %>
+      </div>
+      <div class="field">
+        <%= form.label :agency %>
+        <%= form.text_field :agency %>
+      </div>
+      <div class="field">
+        <%= form.label :comments %>
+        <%= form.text_field :comments %>
+      </div>
+    
+      <%= form.submit "Send" %>
+  <% end %>
+</div>
