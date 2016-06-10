@@ -13,7 +13,7 @@ Sdh::Application.routes.draw do
   match 'allure' => 'welcome#create', :as => 'welcome', :via => :post
   get 'congratulations' => 'welcome#congratulations'
 
-  # mount Ckeditor::Engine => '/ckeditor'
+  mount Ckeditor::Engine => '/ckeditor'
 
   root :to => 'welcome#index'
   resources :services
