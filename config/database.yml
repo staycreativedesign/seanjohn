@@ -5,9 +5,10 @@ development:
   timeout: 5000
 
 production:
+  host: localhost
   adapter: postgresql
   encoding: unicode
   database: sean_prod
   pool: 5
   username: sean_admin
-  password: seanjohn1
+  password: iliketocuthair2
